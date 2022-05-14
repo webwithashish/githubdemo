@@ -150,6 +150,9 @@ body {
 .u-margin-bottom-large {
   margin-bottom: 10rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
 .u-text-decoration-none {
   text-decoration: none;
   color: inherit; }
@@ -167,7 +170,7 @@ body {
 .btn:hover {
   transform: translateY(-0.5rem);
   /* box-shadow: 0 10px 20px rgba(0,0,0,0.7); */
-  box-shadow: 0 1.3rem 2rem rgba(165, 2, 240, 0.7); }
+  box-shadow: 0 1.3rem 2rem rgba(165, 2, 240, 0.5); }
   .btn:hover::after {
     transform: scaleX(1.5) scaley(1.7);
     opacity: 0; }
@@ -190,6 +193,20 @@ body {
   font-size: 1.4rem; }
   .btn--white::after {
     background-color: white; }
+
+.btn--perpule {
+  background-color: rgba(141, 79, 255, 0.8);
+  color: #fff;
+  margin-top: 5.6rem;
+  font-weight: 700;
+  /* animation:moveUp 1.5s ease-out ;  */
+  /* animation:moveUp 1s ease-out 500ms;  */
+  /* animation-fill-mode: forwards; */
+  /* opacity: 0;  */
+  animation: moveInBottom 1.3s ease-out;
+  font-size: 1.4rem; }
+  .btn--perpule::after {
+    background-color: rgba(141, 79, 255, 0.8); }
 
 .btn::after {
   content: "";
@@ -237,7 +254,7 @@ body {
     backface-visibility: hidden;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 0.5rem 1rem rgba(13, 148, 58, 0.3); }
+    box-shadow: 0 0.5rem 1rem rgba(165, 2, 240, 0.3); }
     .card__side--front {
       background-color: #fff; }
     .card__side--back {
@@ -251,20 +268,20 @@ body {
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
-    transform: rotateY(0deg);
-    box-shadow: 0 0.5rem 1rem rgba(13, 148, 58, 0.6); }
+    transform: rotateY(0deg) translateY(-3rem);
+    box-shadow: 0 0.5rem 1rem rgba(165, 2, 240, 0.6); }
   .card__picture {
     background-size: cover;
     height: 45%;
     background-blend-mode: screen;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); }
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%); }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #08da4e, #0d943a), url(../img/card-image-1.jpg); }
     .card__picture--2 {
-      background-image: url(../img/card-image-1.jpg); }
+      background-image: linear-gradient(to right bottom, #d63384, #dc3545), url(../img/card-image-2.jpg); }
     .card__picture--3 {
-      background-image: url(../img/card-image-3.jpg); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/card-image-3.jpg); }
   .card__heading {
     font-size: 2rem;
     font-weight: 400;
@@ -272,14 +289,45 @@ body {
     color: #fff;
     text-align: left;
     position: absolute;
-    top: 12rem;
-    left: 1rem; }
+    top: 9rem;
+    left: 2rem; }
   .card__heading-span {
     padding: .5rem 1.5rem; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(8, 218, 78, 0.8), rgba(13, 148, 58, 0.8)); }
     .card__heading-span--2 {
-      background-image: linear-gradient(to right bottom); }
+      background-image: linear-gradient(to right bottom, rgba(214, 51, 132, 0.8), rgba(220, 53, 69, 0.8)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+    .card__details li {
+      padding: 1.3rem;
+      font-size: 1.6rem;
+      text-align: center; }
+      .card__details li:not(:last-child) {
+        border-bottom: 0.2rem solid rgba(141, 79, 255, 0.2); }
+  .card__cta {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto; }
+    .card__cta__text {
+      padding: 6rem;
+      padding-top: 8rem;
+      color: #fff;
+      text-align: center; }
+    .card__cta__price-only {
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 3rem; }
+    .card__cta__price-value {
+      padding-bottom: 4rem;
+      font-size: 6rem;
+      font-weight: 300; }
 
 .composition {
   position: relative; }
@@ -447,7 +495,7 @@ body {
     width: calc((3 * (100% - 3 * 6rem)/4) +  2*6rem); }
 
 .section-about {
-  background-color: rgba(141, 79, 255, 0.1);
+  background-color: rgba(141, 79, 255, 0.2);
   padding: 20rem 0;
   margin-top: -10vh; }
 
@@ -461,8 +509,8 @@ body {
     transform: skewY(-3deg); }
 
 .section-tours {
-  background-color: rgba(141, 79, 255, 0.1);
-  padding: 20rem 0 50rem;
+  background-color: rgba(141, 79, 255, 0.2);
+  padding: 20rem 0 20rem;
   margin-top: -10vh; }
 
 @media (max-width: 320px) {
